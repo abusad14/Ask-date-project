@@ -138,11 +138,11 @@
         border-radius: 5px;
         box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5);
       }
-      @media (max-height: 760px) {
+      /* @media (min-height: 760px) {
         .btn-container {
           margin-top: 55px;
         }
-      }
+      } */
       .coffee-button {
         height: 55px;
         width: 80px;
@@ -193,18 +193,24 @@
         height: 25%;
         width: 40%;
       }
-      .tea-btn {
-        height: 2vw;
-        width: 6vw;
+      .add-btn {
+        height: 55px;
+        width: 80px;
         cursor: pointer;
         background-color: #b40606cc;
         color: white;
         margin-left: 5vw;
-        font-size: 1.2vw;
+        font-size: 30px;
         font-weight: 550;
         border-radius: 5px;
         box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5);
-        margin-top: 5vh;
+        /* margin-top:; */
+        /* padding: 20px; */
+        /* padding: 0px 20px; */
+        margin: 30px;
+      }
+      .add-btn:hover {
+        transform: scale(1.3); /* Scale button to 105% on hover */
       }
     </style>
   </head>
@@ -219,7 +225,7 @@
       />
       <div class="btn-container">
         <button onclick="okButton()" class="btn1">OKAY!!</button>
-        <button class="btn2">NO</button>
+        <button class="btn2">NOoooo...</button>
       </div>
       <!-- </div> -->
     </div>
@@ -253,11 +259,7 @@
           document.querySelector(".body").innerHTML = "";
           let teaHtml = `<div>
             <h1>Welcome to CuddleCups tea stall 🫖...</h1>
-            <form id="teaOrderForm">
-                <label for="teaQuantity">Enter the number of tea you require : </label>
-                <input type="number" id="teaQuantity" name="teaQuantity" min="1" required>
-                <button class = "tea-btn" type="submit">ADD</button>
-            </form>
+            
             </div>`;
           document.addEventListener("DOMContentLoaded", function () {
             let teaNum = document.querySelector("#teaOrderForm");
@@ -286,11 +288,7 @@
           document.querySelector(".body").innerHTML = "";
           let teaHtml = `<div>
             <h1>Welcome to LoveBeans coffee stall ☕︎...</h1>
-            <form id="teaOrderForm">
-                <label for="teaQuantity">Enter the number of coffee you require : </label>
-                <input type="number" id="teaQuantity" name="teaQuantity" min="1" required>
-                <button type="submit">ADD</button>
-            </form>
+            
             </div>`;
           document.addEventListener("DOMContentLoaded", function () {
             let teaNum = document.querySelector("#teaOrderForm");
